@@ -107,8 +107,6 @@ public class DiscordSocialSpyPlugin extends JavaPlugin implements Listener {
 
         final String body = this.applyBodyFormat(player, group, fullCommand);
 
-        this.getLogger().info("This is the catastrophe I'm about to send: " + body);
-
         final HttpRequest request = HttpRequest.newBuilder()
                 .header("User-Agent", this.getDescription() + "/" + this.getDescription().getVersion())
                 .header("Content-Type", "application/json")
@@ -128,7 +126,7 @@ public class DiscordSocialSpyPlugin extends JavaPlugin implements Listener {
 
         final int statusCode = response.statusCode();
 
-        if (statusCode != 200) {
+        if (statusCode != 204) {
             this.getLogger().warning("Failed to execute webhook. Status Code: " + statusCode);
         }
     }
