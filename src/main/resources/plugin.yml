@@ -1,0 +1,15 @@
+name: DiscordSocialSpy
+description: Sends command attempts to Discord.
+
+author: SavageAvocado.
+website: savagedev.net
+
+api-version: 1.13
+main: net.savagedev.discordsocialspy.DiscordSocialSpyPlugin
+version: ${version}
+
+commands:
+  discordsocialspy:
+    description: Reload the plugin.
+    usage: /<command> reload
+    aliases: [ dss ]

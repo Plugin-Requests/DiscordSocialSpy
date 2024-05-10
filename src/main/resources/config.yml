@@ -1,0 +1,22 @@
+groups:
+  general:
+    webhook_url: "https://discord.com/api/webhooks/987654321098765321/ABCD5678EFGH123IRSTWXYZabcd6789efgh123ijklmnopQRST5678uvwx90yz"
+    commands:
+      - msg
+      - message
+      - pm
+      - fly
+      - god
+      - tp
+      - tphere
+  admin:
+    webhook_url: "https://discord.com/api/webhooks/2468135790246813579/abcd5678efgh123ijklmnpqrst5678UVWX90YB5678EFGH123IJK90NO4PQRST"
+    commands:
+      - ban
+      - ipban
+      - pardon
+      - unban
+      - kick
+      - warn
+      - mute
+      - unmute
