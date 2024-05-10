@@ -1,6 +1,7 @@
 package net.savagedev.discordsocialspy;
 
 import net.savagedev.discordsocialspy.command.DiscordSocialSpyCommand;
+import org.bukkit.command.PluginCommand;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -51,6 +52,12 @@ public class DiscordSocialSpyPlugin extends JavaPlugin implements Listener {
         final String command = fullCommand.split(" ")[0];
 
         if (!this.commandGroups.containsKey(command)) {
+            return;
+        }
+
+        final PluginCommand pluginCommand = this.getServer().getPluginCommand(command);
+
+        if (pluginCommand == null || !pluginCommand.testPermission(event.getPlayer())) {
             return;
         }
 
