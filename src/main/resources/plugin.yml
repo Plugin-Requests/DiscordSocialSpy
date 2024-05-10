@@ -11,5 +11,10 @@ version: ${version}
 commands:
   discordsocialspy:
     description: Reload the plugin.
+    permission: dss.reload
     usage: /<command> reload
     aliases: [ dss ]
+
+permissions:
+  dss.reload:
+    default: op
