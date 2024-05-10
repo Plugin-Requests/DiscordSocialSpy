@@ -1,5 +1,5 @@
 name: DiscordSocialSpy
-description: Sends command attempts to Discord.
+description: Sends a message to Discord when a player successfully executes a command.
 
 author: SavageAvocado.
 website: savagedev.net
