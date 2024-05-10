@@ -1,7 +1,7 @@
 name: DiscordSocialSpy
 description: Sends a message to Discord when a player successfully executes a command.
 
-author: SavageAvocado.
+author: SavageAvocado
 website: savagedev.net
 
 api-version: 1.13
