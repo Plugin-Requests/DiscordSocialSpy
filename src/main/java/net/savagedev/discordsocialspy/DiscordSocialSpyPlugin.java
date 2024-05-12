@@ -57,7 +57,7 @@ public class DiscordSocialSpyPlugin extends JavaPlugin implements Listener {
 
         final PluginCommand pluginCommand = this.getServer().getPluginCommand(command);
 
-        if (pluginCommand == null || !pluginCommand.testPermission(event.getPlayer())) {
+        if (pluginCommand == null || !pluginCommand.testPermissionSilent(event.getPlayer())) {
             return;
         }
 
