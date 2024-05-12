@@ -114,11 +114,11 @@ public class DiscordSocialSpyPlugin extends JavaPlugin implements Listener {
 
         final String body = this.applyBodyFormat(player, group, fullCommand);
 
-        final HttpRequest request = HttpRequest.newBuilder()
-                .header("User-Agent", this.getDescription() + "/" + this.getDescription().getVersion())
+        final HttpRequest request = HttpRequest.newBuilder(URI.create(webhookUrl))
+                .header("User-Agent", this.getDescription().getName() + "/" + this.getDescription().getVersion())
                 .header("Content-Type", "application/json")
-                .uri(URI.create(webhookUrl))
-                .POST(BodyPublishers.ofString(body)).build();
+                .POST(BodyPublishers.ofString(body))
+                .build();
 
         HttpResponse<String> response = null;
         try {
