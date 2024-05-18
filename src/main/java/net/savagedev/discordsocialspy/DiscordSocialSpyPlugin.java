@@ -85,7 +85,9 @@ public class DiscordSocialSpyPlugin extends JavaPlugin implements Listener {
                 .replace("%sender_uuid%", player.getUniqueId().toString().replace("-", ""))
                 .replace("%group_name%", commandGroup)
                 .replace("%full_command%", fullCommand)
-                .replace("%root_command%", fullCommand.split(" ", 1)[0]);
+                .replace("%root_command%", fullCommand.split(" ", 1)[0])
+                .replace("%plugin_name%", this.getDescription().getName())
+                .replace("%plugin_version%", this.getDescription().getVersion());
     }
 
     private void computeCommandGroups() {

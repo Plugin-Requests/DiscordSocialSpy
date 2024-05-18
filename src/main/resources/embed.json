@@ -15,7 +15,7 @@
         }
       ],
       "footer": {
-        "text": "SocialSpyLink v1.0.0"
+        "text": "%plugin_name% %plugin_version%"
       }
     }
   ]
